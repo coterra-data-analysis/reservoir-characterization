@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "reservoir-characterization"
+version = "0.1.0"
+description = ""
+authors = ["Kelley Davison <kelley.davison@coterra.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^1.5.1"
+numpy = "^1.23.4"
+scipy = "^1.9.3"
+pyproj = "^3.4.0"
+matplotlib = "^3.6.2"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+pytest = "^7.2.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
