@@ -1,0 +1,44 @@
+{
+    "name": "Chronolog Core",
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": "..",
+        "target": "development"
+    },
+
+    "mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+        "source=projectname-bashhistory,target=/commandhistory,type=volume"
+    ],
+    "initializeCommand": "docker login -u azureml-dev -p /7eqFtwug1s5TVU1OgLSFHFQtDtNEST0 dataanalysis.azurecr.io",
+    "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.azure-account",
+        "eamodio.gitlens",
+        "xyz.local-history",
+        "ms-toolsai.jupyter",
+        "mutantdino.resourcemonitor",
+        "redhat.vscode-yaml",
+        "ms-kubernetes-tools.vscode-aks-tools",
+        "ms-azuretools.vscode-azureresourcegroups",
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "github.copilot",
+        "bungcip.better-toml",
+        "GitHub.vscode-pull-request-github",
+        "GitHub.codespaces",
+        "GitHub.remotehub"
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/docker-from-docker:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/azure-cli:1": {
+            "version": "latest"
+        }
+    }
+}
