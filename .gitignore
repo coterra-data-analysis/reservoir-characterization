@@ -1,0 +1,13 @@
+*.pyc
+*.pyman
+*.pyo
+.ipynb_checkpoints/
+.pytest_cache/
+__pycache__/
+test-output.xml
+coverage.xml
+.coverage
+htmlcov/
+junit/
+.history/
+*.egg-info/
